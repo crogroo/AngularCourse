@@ -1,0 +1,22 @@
+<div class="card-form">
+    <form #userForm="ngForm" class="signup">
+      <div class="form-title">Add new user</div>
+      <div class="form-body">
+        <div class="row">
+          <input ngModel name="firstName" type="text" placeholder="First Name*">
+          <input ngModel name="lastName" type="text" placeholder="Last Name*">
+        </div>
+        <div class="row">
+          <input ngModel name="address"type="text" placeholder="Email Address*">
+        </div>
+        <div class="row">
+            <input ngModel name="imgUrl" type="text" placeholder="Drop an image URL*">
+          </div>
+      </div>
+      <div class="rule"></div>
+      <div class="form-footer">
+        <button (click)="addUser(userForm.value)">{{UpdateMode == false ? "SUBMIT" : "UPDATE"}}<span class="fa fa-thumbs-o-up"></span></button>
+        <button (click)="changeMode()">CHANGE MODE<span class="fa fa-thumbs-o-up"></span></button>
+      </div>
+    </form>
+  </div>
